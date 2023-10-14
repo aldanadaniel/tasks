@@ -7,4 +7,6 @@ export const pool = mysql.createPool({
     user: process.env.DB_USER || "root",
     password: process.env.DB_PASSWORD || "",
     database: process.env.DB_DATABASE || "tasksdb",
+    port: process.env.DB_PORT,
+    uri: process.env.DB_URI
 })
