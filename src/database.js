@@ -1,6 +1,10 @@
 import mysql from "mysql2/promise";
-import { config } from "./config.js";
+import { config as dotenv } from "dotenv";
+dotenv();
 
-export const connect = async () => {
-  return await mysql.createConnection(config);
-};
+export const pool = mysql.createPool({
+    host: process.env.DB_HOST || "localhost",
+    user: process.env.DB_USER || "root",
+    password: process.env.DB_PASSWORD || "",
+    database: process.env.DB_DATABASE || "tasksdb",
+})
