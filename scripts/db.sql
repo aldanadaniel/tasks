@@ -10,5 +10,5 @@ CREATE TABLE IF NOT EXISTS tasks(
 );
 
 INSERT INTO tasks(title, description) VALUES
-  ('my first task', 'some description'),
-  ('my second task', 'some second description');
+  ('armenia', 'chacalitos'),
+  ('daniel', 'perror');
